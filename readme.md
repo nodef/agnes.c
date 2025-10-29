@@ -1,8 +1,8 @@
 ## About
-agnes is a NES emulation library written in C with an easy to use API. It consists of only 2 files (agnes.h and agnes.c).
+agnes is a NES emulation library written in C with an easy to use API, by [Krzysztof Gabis](https://github.com/kgabis). It consists of only 2 files (`agnes.h` and `agnes.c`).
 
 ## Features
-* Only 2 files (agnes.h and agnes.c).
+* Only 2 files (`agnes.h` and `agnes.c`).
 * Easy to use.
 * MIT licensed.
 * Supports NROM, UxROM, MMC1 and MMC3 mappers.
@@ -43,13 +43,27 @@ Full and working examples can be found in [examples directory](http://github.com
 
 ## Installation
 Run:
+```bash
+$ npm i agnes.c
 ```
-git clone https://github.com/kgabis/agnes.git
+
+And then include `agnes.h` as follows:
+```c
+#include "node_modules/agnes.c/agnes.h"
 ```
-and copy agnes.h and agnes.c to you source code tree.
+
+You may also want to include `agnes.c` as follows:
+```c
+#ifndef __AGNES_C__
+#define __AGNES_C__
+#include "node_modules/agnes.c/agnes.c"
+#endif
+```
+
+This will include both the function declaration and their definitions into a single file.
 
 ## Testing
-Run ```run_tests.sh ROM_DIRECTORY``` (in tests directory) to compile and run tests.
+Run ```cd node_modules/agnes.c/tests && run_tests.sh ROM_DIRECTORY``` to compile and run tests.
 
 Since I cannot add roms to this project they must be downloaded manually. Please look at contents of [examples/recs.tar.gz](http://github.com/kgabis/agnes/tree/master/examples/recs.tar.gz) for names of roms that are required to run tests. Emulator testing roms (such as nestest.nes or official_only.nes) can be obtained from [here](https://wiki.nesdev.com/w/index.php/Emulator_tests). If you want to update add a recording or update an existing one run ```recorder``` (located in tests dir).
 

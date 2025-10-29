@@ -1,0 +1,19 @@
+{
+  "name": "agnes.c",
+  "version": "0.2.0",
+  "description": "NES emulation library with an easy to use API; Krzysztof Gabis (2019).",
+  "keywords": ["c", "library", "nes", "nintendo", "entertainment", "system", "emulation", "game"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nodef/agnes.c.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nodef/agnes.c/issues"
+  },
+  "homepage": "https://github.com/nodef/agnes.c#readme",
+  "files": [
+    "agnes.c",
+    "agnes.h"
+  ]
+}
